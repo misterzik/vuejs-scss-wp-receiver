@@ -1,0 +1,187 @@
+    @import '__appConfig';
+    //colors
+    $color_bunker_approx: rgba(19, 19, 19, 1);
+    $white: #fff;
+    $color_dove_gray_approx: rgb(107, 107, 107);
+    $color_cararra_approx: #ececec;
+    $color_cerulean_approx: #03a9f4;
+    $color_razzmatazz_approx: #e91e63;
+    $color_cedar_approx: rgb(66, 23, 22);
+    $color_corvette_approx: #ffd5a4;
+    $color_heath_approx: rgb(82, 21, 20);
+    $color_crown_of_thorns_approx: #712222;
+    //urls
+    // $url_0: url(assets/images/hamburger.svg);
+    /* Navigation */
+    
+    nav {
+        background: $color_bunker_approx;
+        color: $white;
+        height: 52px;
+        display: block;
+        padding-top: 6px;
+        padding-left: 7px;
+    }
+    
+    #nav {
+        margin-top: 1px;
+    }
+    
+    #nav-mobile-full {
+        margin-top: 7rem;
+    }
+    
+    .hamburger-logo {
+        filter: invert(100%);
+        float: right;
+        width: 24px;
+        margin-top: 3px;
+    }
+    
+    .logo {
+        @include Left;
+        width: 61px;
+        height: 40px;
+        padding: 5px;
+        margin-left: 1rem;
+        background: #bd0d0d94;
+        border-radius: 4px;
+    }
+    
+    .logo-inner {
+        float: left;
+        margin-right: 1rem;
+        width: 34px;
+        margin-top: 2px;
+        padding-left: 6px;
+        @media screen and (min-width: $break-large) {
+            float: right;
+        }
+    }
+    
+    .logo-menu {
+        float: left;
+        position: relative;
+        text-shadow: 0px 3px 12px rgb(107, 107, 107);
+        display: none;
+        margin-left: 1rem;
+        @media screen and (min-width: $break-large) {
+            display: block;
+        }
+        a {
+            &:active {
+                color: $color_cararra_approx;
+                text-decoration: none;
+                font-size: 17px;
+                text-transform: uppercase;
+            }
+            &:link {
+                color: $color_cararra_approx;
+                text-decoration: none;
+                font-size: 17px;
+                text-transform: uppercase;
+            }
+            &:visited {
+                color: $color_cararra_approx;
+                text-decoration: none;
+                font-size: 17px;
+                text-transform: uppercase;
+            }
+            &:hover {
+                color: $color_cerulean_approx;
+                border-bottom: 5px solid $color_razzmatazz_approx;
+            }
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        li {
+            @include Left;
+            a {
+                display: block;
+                padding: 8px;
+            }
+        }
+    }
+    
+    .logo-mobile-menu {
+        display: block;
+        @include Right;
+        padding-top: 16px;
+        color: $white;
+        @media screen and (max-width: $break-small) {
+            display: block;
+        }
+        @media screen and (min-width: $break-large) {
+            display: none;
+        }
+    }
+    
+    .fade-enter-active {
+        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: opacity 0.5s;
+    }
+    
+    .fade-leave-active {
+        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: opacity 0.5s;
+        opacity: 0;
+    }
+    
+    .fade-enter {
+        opacity: 0;
+    }
+    
+    .overlay {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: $color_cedar_approx;
+        overflow: hidden;
+        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: 0.5s;
+    }
+    
+    .fullMenu {
+        overflow: hidden;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 56px;
+            color: $white;
+            display: block;
+            //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+            transition: 0.3s;
+        }
+    }
+    
+    .navHamburger {
+        display: block;
+        text-indent: -9999px;
+        width: 44px;
+        height: 52px;
+        margin-top: -22px;
+        // background: $url_0;
+        background-size: 100%;
+        background-color: $color_corvette_approx;
+    }
+    
+    .closeHamburger {
+        float: right;
+        height: 44px;
+        width: 49px;
+        background: $white;
+        color: $color_crown_of_thorns_approx !important;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        font-size: 25px !important;
+        border: 1px solid $color_cedar_approx;
+    }

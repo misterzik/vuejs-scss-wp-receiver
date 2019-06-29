@@ -1,0 +1,4 @@
+{
+    "/wp-json/wp/v2/*": "/$1",
+    "/:resource/:id/show": "/:resource/:id"
+}

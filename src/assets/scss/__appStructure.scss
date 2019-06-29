@@ -1,0 +1,105 @@
+//colors
+$color_pickled_bluewood_approx: #2c3e50;
+$color_fiord_approx: #394a61;
+$white: #fff;
+$color_ebony_clay_approx: #232d3c;
+$color_bali_hai_approx: #919dad;
+$color_raw_sienna_approx: #d28041;
+//fonts
+$font_0: Avenir;
+$font_1: Helvetica;
+$font_2: Arial;
+$font_3: sans-serif;
+//@extend-elements
+//original selectors
+//body, html
+%extend_1 {
+    margin: 0;
+    height: 100%;
+    overflow: auto;
+}
+
+//original selectors
+//.footer li a:link, .footer li a:visited, .footer li a:active
+%extend_2 {
+    display: block;
+    text-decoration: none;
+    color: $color_bali_hai_approx;
+}
+
+body {
+    @extend %extend_1;
+}
+
+html {
+    @extend %extend_1;
+}
+
+hr {
+    height: 6px;
+    border: 0;
+}
+
+#app {
+    font-family: $font_0, $font_1, $font_2, $font_3;
+    text-align: center;
+    color: $color_pickled_bluewood_approx;
+}
+
+footer {
+    width: 100%;
+}
+
+.footer {
+    background-color: $color_fiord_approx;
+    color: $white;
+    padding: 3px;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    li a {
+        &:link {
+            @extend %extend_2;
+        }
+        &:visited {
+            @extend %extend_2;
+        }
+        &:active {
+            @extend %extend_2;
+        }
+        &:hover {
+            display: block;
+            text-decoration: none;
+            color: $color_raw_sienna_approx;
+        }
+    }
+}
+
+.footerTitle {
+    @include Left;
+    @include clearfix;
+    color: $color_raw_sienna_approx;
+    font-size: 20px;
+}
+
+.footer-copyright {
+    padding: 1px;
+    background-color: $color_ebony_clay_approx;
+    text-align: left;
+    color: $white;
+    font-size: 11px;
+    @include clearfix;
+}
+
+.footerDesc {
+    text-align: left;
+    font-size: 14px;
+    color: $color_bali_hai_approx;
+}
+
+.copyright-block {
+    padding: 5px;
+    opacity: 0.6;
+}

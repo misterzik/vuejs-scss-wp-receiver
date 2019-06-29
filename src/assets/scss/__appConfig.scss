@@ -1,0 +1,38 @@
+/*
+ * Mixins
+ */
+
+@mixin Left {
+    float: left;
+}
+
+@mixin Right {
+    float: right;
+}
+
+@mixin clearfix {
+    overflow: auto;
+}
+
+@mixin Center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*
+   * Font's
+   */
+
+$content-font: 29px/1.5 'Libre Franklin',
+sans-serif;
+$title-font: 37px/1.5 'Bungee Shade',
+cursive;
+$box-shadow-bottom-only: 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+
+/**
+  * Mobile Set Rules
+  */
+
+$break-small: 320px;
+$break-large: 1106px;

@@ -1,0 +1,293 @@
+/* Sections - Parallax */
+
+$mobileHeightSize: 370px;
+$desktopHeightSize: 467px;
+@mixin parallaxConfig {
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin parallaxInnerTitleConfig {
+    display: block;
+    background: rgba(255, 185, 44, 0.63);
+    padding-bottom: 4px;
+}
+
+@mixin parallax-innerContentConfig {
+    display: block;
+    padding: 13px;
+    text-align: left;
+}
+
+@mixin parallaxImgConfig {
+    display: block;
+    text-indent: -9999px;
+    background-size: 100%;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("http://i.imgur.com/bIy3l7l.jpg");
+    @include parallaxConfig;
+    height: $mobileHeightSize;
+    @media screen and (max-width: $break-small) {
+        //display: block;
+        height: $mobileHeightSize;
+    }
+    @media screen and (min-width: $break-large) {
+        //display: none;
+        height: $desktopHeightSize;
+    }
+}
+
+.parallax-2 {
+    /* The image used */
+    background-image: url("https://images.unsplash.com/photo-1561518801-3a7645cf0256?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+    @include parallaxConfig;
+    height: $mobileHeightSize;
+    @media screen and (max-width: $break-small) {
+        //display: block;
+        height: $mobileHeightSize;
+    }
+    @media screen and (min-width: $break-large) {
+        //display: none;
+        height: $desktopHeightSize;
+    }
+}
+
+.parallax-3 {
+    /* The image used */
+    background-image: url("assets/images/world.jpg");
+    @include parallaxConfig;
+    height: $mobileHeightSize;
+    @media screen and (max-width: $break-small) {
+        //display: block;
+        height: $mobileHeightSize;
+    }
+    @media screen and (min-width: $break-large) {
+        //display: none;
+        height: $desktopHeightSize;
+    }
+}
+
+.parallax-4 {
+    /* The image used */
+    background-image: url("assets/images/peaceful.jpg");
+    @include parallaxConfig;
+    height: $mobileHeightSize;
+    @media screen and (max-width: $break-small) {
+        //display: block;
+        height: $mobileHeightSize;
+    }
+    @media screen and (min-width: $break-large) {
+        //display: none;
+        height: $desktopHeightSize;
+    }
+}
+
+.parallax-5 {
+    /* The image used */
+    background-image: url("assets/images/underground.png");
+    @include parallaxConfig;
+    height: $mobileHeightSize;
+    @media screen and (max-width: $break-small) {
+        //display: block;
+        height: $mobileHeightSize;
+    }
+    @media screen and (min-width: $break-large) {
+        //display: none;
+        height: 367px;
+    }
+}
+
+.parallax-innerTitle {
+    font: $title-font;
+    color: #402828;
+    @include parallaxInnerTitleConfig;
+}
+
+.parallax-innerTitle-2 {
+    font: $title-font;
+    color: #402828;
+    @include parallaxInnerTitleConfig;
+}
+
+.parallax-innerTitle-3 {
+    font: $title-font;
+    color: #402828;
+    @include parallaxInnerTitleConfig;
+}
+
+.parallax-innerTitle-4 {
+    font: $title-font;
+    color: #404040;
+    background: #e4b6b6 !important;
+    @include parallaxInnerTitleConfig;
+}
+
+.parallax-innerTitle-5 {
+    font: $title-font;
+    color: rgba(0, 0, 0, 0.07);
+    background: rgb(79, 79, 79)!important;
+    @include parallaxInnerTitleConfig;
+}
+
+.parallax-innerContent {
+    font: $content-font;
+    @include Left;
+    color: #402828;
+    @include parallax-innerContentConfig;
+    width: 67%;
+    font-size: 24px;
+    @media screen and (max-width: $break-small) {
+        font-size: 24px;
+        width: 67%;
+    }
+    @media screen and (min-width: $break-large) {
+        font: $content-font;
+        width: 50%;
+    }
+}
+
+.parallax-innerContent-2 {
+    font: $content-font;
+    @include Right;
+    color: #402828;
+    @include parallax-innerContentConfig;
+    width: 67%;
+    font-size: 24px;
+    @media screen and (max-width: $break-small) {
+        width: 67%;
+        font-size: 24px;
+    }
+    @media screen and (min-width: $break-large) {
+        font: $content-font;
+        width: 50%;
+    }
+}
+
+.parallax-innerContent-3 {
+    font: $content-font;
+    @include Left;
+    color: #402828;
+    @include parallax-innerContentConfig;
+    width: 67%;
+    font-size: 24px;
+    @media screen and (max-width: $break-small) {
+        width: 67%;
+        font-size: 24px;
+    }
+    @media screen and (min-width: $break-large) {
+        font: $content-font;
+        width: 50%;
+    }
+}
+
+.parallaxTxtContainer {
+    height: 533px;
+    max-height: 100%;
+    background-color: rgb(165, 174, 183);
+    @media screen and (max-width: $break-small) {
+        height: 533px;
+        max-height: 100%;
+    }
+    @media screen and (min-width: $break-large) {
+        height: 533px;
+        max-height: 100%;
+    }
+}
+
+.parallaxTxtContainer-2 {
+    height: 640px;
+    max-height: 100%;
+    background-color: #FFF;
+    @media screen and (max-width: $break-small) {
+        height: 640px;
+        max-height: 100%;
+    }
+    @media screen and (min-width: $break-large) {
+        height: 640px;
+        max-height: 100%;
+    }
+}
+
+.parallaxTxtContainer-3 {
+    height: 640px;
+    max-height: 100%;
+    background-color: rgb(165, 174, 183);
+    @media screen and (max-width: $break-small) {
+        height: 640px;
+        max-height: 100%;
+    }
+    @media screen and (min-width: $break-large) {
+        height: 640px;
+        max-height: 100%;
+    }
+}
+
+.parallaxTxtContainer-4 {
+    height: 500px;
+    max-height: 100%;
+    background-color: rgb(165, 174, 183);
+    @media screen and (min-width: $break-large) {
+        height: 650px;
+        max-height: 100%;
+    }
+}
+
+.parallax-innerContentLeft {
+    @include clearfix;
+}
+
+.parallax-innerContentRight {
+    @include clearfix;
+}
+
+.parallax-f-Image {
+    @include parallaxImgConfig;
+    @include Left;
+    @include clearfix;
+    width: 270px;
+    height: 433px;
+    // background: url('assets/images/touch_id.svg');
+    @media screen and (max-width: $break-small) {
+        width: 270px;
+        height: 433px;
+    }
+    @media screen and (min-width: $break-large) {
+        width: 82%;
+        height: 285px;
+    }
+}
+
+.parallax-s-Image {
+    @include Center;
+    @include clearfix;
+    @include parallaxImgConfig;
+    float: right;
+    background: url('assets/images/rocket.png');
+    width: 270px;
+    height: 378px;
+    @media screen and (max-width: $break-small) {
+        width: 270px;
+        height: 433px;
+    }
+    @media screen and (min-width: $break-large) {
+        width: 82%;
+        height: 285px;
+    }
+}
+
+.parallax-t-Image {
+    display: block;
+    text-indent: -9999px;
+    width: 252px;
+    height: 262px;
+    background: url('assets/images/help.png');
+    background-size: 100%;
+    @include clearfix;
+    @include Left;
+}
